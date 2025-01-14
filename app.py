@@ -264,11 +264,11 @@ if nota_usuario:
                 with st.expander(f"🏛️ {row['SG_IES']} - {row['SG_UF_CAMPUS']}"):
                     col1, col2 = st.columns(2)
                     with col1:
-                        st.markdown(f"**Nota de Corte:** {row['NU_NOTACORTE']:.1f}")
-                        st.markdown(f"**Sua Nota Está Acima:** {nota_usuario - row['NU_NOTACORTE']:.1f} pontos")
+                        st.markdown(f"<div style='color: #FFFFFF;'><strong>Nota de Corte:</strong> {row['NU_NOTACORTE']:.1f}</div>", unsafe_allow_html=True)
+                        st.markdown(f"<div style='color: #FFFFFF;'><strong>Sua Nota Está Acima:</strong> {nota_usuario - row['NU_NOTACORTE']:.1f} pontos</div>", unsafe_allow_html=True)
                     with col2:
-                        st.markdown(f"**Modalidade:** {row['DS_MOD_CONCORRENCIA']}")
-                        st.markdown(f"**Estado:** {row['SG_UF_CAMPUS']}")
+                        st.markdown(f"<div style='color: #FFFFFF;'><strong>Modalidade:</strong> {row['DS_MOD_CONCORRENCIA']}</div>", unsafe_allow_html=True)
+                        st.markdown(f"<div style='color: #FFFFFF;'><strong>Estado:</strong> {row['SG_UF_CAMPUS']}</div>", unsafe_allow_html=True)
         else:
             st.markdown("---")  # Divisor
             st.warning("⚠️ Com sua nota atual, você não seria aprovado em nenhuma vaga nas condições selecionadas.")
@@ -292,8 +292,8 @@ st.markdown("<br><br>", unsafe_allow_html=True)
 # Footer com informações
 st.markdown("""
 <div style='position: fixed; bottom: 0; width: 100%; background-color: #1E1E1E; padding: 10px; text-align: center; border-top: 1px solid #333;'>
-    <p style='color: #CCC; margin: 0;'>
-        Dados fornecidos pelo MEC • Atualizado em 14/01/2025 • 
+    <p style='color: #FFFFFF; margin: 0;'>
+        Dados retirados do site do MEC • Atualizado em 14/01/2025 • 
         Desenvolvido por <a href='https://x.com/danielstudytwt' target='_blank' style='color: #00FF00; text-decoration: none;'>@danielstudytwt</a>
     </p>
 </div>
